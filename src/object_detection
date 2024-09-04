@@ -23,7 +23,7 @@ module ObstacleDetection(
       
       // Check left sensor close and right sensor close, activates opposite buzzer to closest
       if (sensor_left <= THRESHOLD && sensor_right <= THRESHOLD) begin
-        if (sensor_left < sensor_right) begin
+        if (sensor_left <= sensor_right) begin
           right_buzz = 2'b10;
           left_buzz = 2'b01;
         end
