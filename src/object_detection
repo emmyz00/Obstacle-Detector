@@ -8,7 +8,7 @@ module ObstacleDetection(
   output reg [1:0] right_buzz // 2-bit output for right buzz (00: off, 01: close, 10: further)
 );
   
-  // Defines the distance threshold in millimeters
+  // Define the distance threshold in millimeters
   parameter THRESHOLD = 16'd1000; // 1000 millimeters
   
   always @(*) begin
@@ -21,14 +21,18 @@ module ObstacleDetection(
       left_buzz = 0;
       right_buzz = 0;
       
-      // Check left sensor close and right sensor close, activates opposite buzzer to closest
+      // Check left sensor close and right sensor close, activates opposite buzzer to closest if they're the same distance, activates both
       if (sensor_left <= THRESHOLD && sensor_right <= THRESHOLD) begin
-        if (sensor_left <= sensor_right) begin
+        if (sensor_left < sensor_right) begin
           right_buzz = 2'b10;
           left_buzz = 2'b01;
         end
         if (sensor_left > sensor_right) begin
           left_buzz = 2'b10;
+          right_buzz = 2'b01;
+        end
+        if (sensor_left == sensor_right) begin
+          left_buzz = 2'b01;
           right_buzz = 2'b01;
         end
       end
