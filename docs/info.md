@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+It takes in two different numbers one for a left sensor and one for a right sensor. If either sensor reads anything closer or equal to 1000 milimeters it sends 2 to the opposite side's output. But if both sides read under 1000 milimeters, it will send 2 to the opposite side that is further and it will send 1 to the opposite side of the one that is closer.
 
 ## How to test
 
-Explain how to use your project
+
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Ultrasonic Sensors and Haptic Motors
