@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Object Detection"      # Project title
+  title:        "Obstacle Detection"      # Project title
   author:       "Emmy Xu"      # Your name
   discord:      "emmy.zoo"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Does the logic of when to send certain signals when objects are close."      # One line description of what your project does
