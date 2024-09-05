@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = object_detection
+PROJECT_SOURCES = obstacle_detection
 
 ifneq ($(GATES),yes)
 
