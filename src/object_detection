@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module object_detection(
+module obstacle_detection(
   input wire reset,
   input wire [15:0] sensor_left, // 16-bit input from left sensor (in millimeters)
   input wire [15:0] sensor_right, // 16-bit input from right sensor (in millimeters)
