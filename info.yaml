@@ -32,8 +32,8 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "right_buzz"
-  uo[1]: "left_buzz"
+  uo[0]: "left_buzz"
+  uo[1]: "right_buzz"
   uo[2]: ""
   uo[3]: ""
   uo[4]: ""
