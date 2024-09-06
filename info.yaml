@@ -24,7 +24,7 @@ pinout:
   # Inputs
   ui[0]: "sensor_left"
   ui[1]: "sensor_right"
-  ui[2]: ""
+  ui[2]: "reset"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
