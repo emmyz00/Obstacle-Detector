@@ -26,6 +26,7 @@ wire sensor_right;
   assign reset = !rst_n;
   assign sensor_left = ui_in[0];
   assign sensor_right = ui_in[1];
+  assign uo_out[7:4] = 0;
   generate
       obstacle_detection u_obstacle_detection(
           .reset(reset),
