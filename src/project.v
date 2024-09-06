@@ -18,8 +18,6 @@ module tt_um_emmyxu_obstacle_detection (
 wire reset;
 wire sensor_left;
 wire sensor_right;
-wire [1:0] left_buzz;
-wire [1:0] right_buzz;
     
   // All output pins must be assigned. If not used, assign to 0.
   //assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
