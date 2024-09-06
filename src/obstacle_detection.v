@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module obstacle_detection(
   input wire reset,
   input wire sensor_left, // input from left sensor
