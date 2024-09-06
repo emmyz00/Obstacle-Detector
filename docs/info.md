@@ -1,20 +1,11 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-It takes in two different numbers one for a left sensor and one for a right sensor. If either sensor reads anything closer or equal to 1000 milimeters it sends 2 to the opposite side's output. But if both sides read under 1000 milimeters, it will send 2 to the opposite side that is further and it will send 1 to the opposite side of the one that is closer.
+It takes in two different numbers one for a left sensor and one for a right sensor. There is a threshold value of 1 or 0, if the threshold has been passed, it will have a value of 1. If only one side has a value of one, it will send a 2'b10 meant for a motor to the opposite side. If both sides have a value of one, it will send 2'b01 to both sides meant for motors.
 
 ## How to test
 
-kjkjl
+Set it up so that a value of 1 or 0 is going into the sensor pins and connect the output pins to something that can read what the chip is sending out. The reset pin resets when power is sent to it, which just makes it output 0s to all the outputs.
 
 ## External hardware
 
-Ultrasonic Sensors and Haptic Motors
+Ultrasonic Sensors, Microcontroller, and Haptic Motors
