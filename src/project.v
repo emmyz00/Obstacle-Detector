@@ -15,7 +15,7 @@ module tt_um_emmyxu_obstacle_detection (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
-wire rst;
+wire reset;
 wire sensor_left;
 wire sensor_right;
 wire [1:0] left_buzz;
@@ -25,7 +25,7 @@ wire [1:0] right_buzz;
   //assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
-  assign rst = !rst_n;
+  assign reset = !rst_n;
   assign sensor_left = ui_in[0];
   assign sensor_right = ui_in[1];
   assign left_buzz = uo_out[]
