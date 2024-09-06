@@ -28,14 +28,18 @@ wire [1:0] right_buzz;
   assign reset = !rst_n;
   assign sensor_left = ui_in[0];
   assign sensor_right = ui_in[1];
-  assign left_buzz = uo_out[]
-  assign right_buzz = uo_out[]
-  generate 
+  assign uo_out[1:0] = left_buzz;
+  assign uo_out[3:2] = right_buzz;
+  generate
       obstacle_detection u_obstacle_detection(
-          
+          .reset(reset),
+          .sensor_left(sensor_left),
+          .sensor_right(sensor_right),
+          .left_buzz(uo_out[1:0]),
+          .right_buzz(uo_out[3:2])
       );
   endgenerate
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+    wire _unused = &{ena, clk, rst_n, ui_in[7:2], uio_in, 1'b0};
 
 endmodule
